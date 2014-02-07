@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/kickstart.js"></script> <!-- KICKSTART -->
+<link rel="stylesheet" href="css/kickstart.css" media="all" /> 
+<link rel="stylesheet" href="css/style.css" media="all" />
+
+<script type="text/javascript" src="js/jQuery.js"></script>
+</head>
+<body>
+
+    <div class ="header">
+        <h2> <center> BestBrightLight</center> </h2>
+    </div>
+    <br>
+ <div id="info1">
+     <center><p>  Welcome to the protoype build of "BestBrightLight.com"
+            It is not anywhere near finished butt, in the mean time, you can
+            create a account, login and check out the concept! Thank you! - BestBrightLight team 
+     </p> </center>
+     
+
+ <div class="form_div">
+ 
+ <center><form id="form1">
+   <input type="text" name="f_name" id="f_name" required="true"> <span>Please Enter your First Name</span> <br><br>
+
+   
+   <input type="text" name="l_name" id="l_name"required="true"> <span>Please Enter your Last Name</span> <br><br>
+
+   
+   <input type="email" name="email" id = "email"required="true"> <span id  = "email_span_text">Please Enter a valid email address</span> <br><br>
+
+   
+   <input type="password" name="pass" id = "pass"required="true">  <span>Choose a password</span> <br><br>
+
+   
+   <input type="password" name="confirm_pass" id="confirm_pass"required="true"> <span>Confirm Password</span> 
+   <br>
+   <br>
+   <button type="submit">Create Account!</button>
+  </form>  
+</center>
+ </div>
+ </div>
+    
+<!-- START OF AJAX CALL -->
+<script>   
+ $("#form1 span").hide();
+       
+ $('input').focus(function()
+ {
+ $(this).next().fadeIn("slow");
+} 
+ ).blur(function() { $(this).next().hide();}).keyup(function()
+{
+  
+ });
+       
+            
+    $('#form1').submit(function(event) 
+     {  
+       event.preventDefault();
+       $.ajax(
+       {
+       type: 'POST',
+       url: 'initial_ajax.php',
+       data: $(this).serialize(),
+       dataType: 'json',
+       success: function (data) 
+       {
+       console.log(data);
+       $('#info1').html(data.msg);
+       }
+    });
+ });
+ 
+
+</script>
+ <!-- END OF AJAX CALL --> 
+ 
+ <br>
+ <br>
+ 
+</body>
+</html>

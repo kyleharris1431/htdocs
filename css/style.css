@@ -11,7 +11,31 @@
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
+#posting_div
+{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid gray;
+}
+#img_div
+{
+  width: 80%;
+  height: 80%;
 
+}
+$img_placeholder
+{
+ height: 90%;
+ width: 90%;
+}
+.newH1
+{
+color: steelblue;
+font-size: xx-large;
+font-size: 200%;
+font-weight: bold;
+}
 #hobby_div
 { margin-left: auto;
   margin-right: auto;
@@ -29,6 +53,7 @@
    margin-left: auto;
    margin: 5px;
 }
+
 
 .hobby_img:hover
 {
@@ -259,7 +284,7 @@ button.blue:hover
 		font-style: italic;
 	}
 	
-	p, ul, ol, dl, table
+	p, ol, dl, table
 	{
 		margin-bottom: 2em;
 	}
@@ -517,7 +542,7 @@ button.blue:hover
 			width: 100%;
 		}
 		
-			table.default
+			table.defa
 			{
 				width: 100%;
 				text-align: left;
@@ -655,7 +680,7 @@ button.blue:hover
 		.fa-li{position:absolute;left:-2.142857142857143em;width:2.142857142857143em;top:.14285714285714285em;text-align:center}.fa-li.fa-lg{left:-1.8571428571428572em}
 		.fa-border{padding:.2em .25em .15em;border:solid .08em #eee;border-radius:.1em}
 		.pull-right{float:right}
-		.pull-left{float:left}
+		.pl-left{float:left}
 		.fa.pull-left{margin-right:.3em}
 		.fa.pull-right{margin-left:.3em}
 		.fa-spin{-webkit-animation:spin 2s infinite linear;-moz-animation:spin 2s infinite linear;-o-animation:spin 2s infinite linear;animation:spin 2s infinite linear}
@@ -1221,7 +1246,15 @@ button.blue:hover
 /*********************************************************************************/
 /* Main                                                                          */
 /*********************************************************************************/
-
+#newdiv
+{
+margin: 0;
+overflow: hidden;
+padding: 3em 0 4em 0;
+box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.025);
+text-align: center;
+background-image: url('images/overlay.png');
+}
 	#main
 	{
 		margin-left: 375px;

@@ -67,7 +67,7 @@ if (isset($_SESSION['id_num']))
 		<script type="text/javascript" src="/scripts/jquery.min.js"></script>
 
 	
-		<script type="text/javascript" src="/scripts/jquery.form.js"></script>
+<script type="text/javascript" src="/scripts/jquery.form.js"></script>
 
 <script type="text/javascript" >
  $(document).ready(function() 

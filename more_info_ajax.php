@@ -11,7 +11,6 @@ class ajaxVal
         //Put form elements into post variables (this is where you would sanitize your data)
         //$field1 = $_POST['field1'];
         
-        $about = $_POST['about_text'];
 
         $id='';
         if (isset($_SESSION['id_num']))
@@ -24,14 +23,7 @@ class ajaxVal
         $return['msg'] = '';     // just to get compiler to hush up
         $return['error'] = false;
 
-        //Begin form validation functionality
-        if (!isset($about) || empty($about))      // checks if fiellds are empty
-        {
-            $return['error'] = true;
-           // $return['msg'] .= '<li>Error: Field1 is empty.</li>';
-        }
-
-        //Begin form success functionality
+            //Begin form success functionality
         if ($return['error'] === false)    // checks for an error
         {
             // running a query, need to optimize feilds. 
@@ -52,7 +44,19 @@ class ajaxVal
             else 
             {
               
-                $sql = "UPDATE user_info_2 SET about_me = '".$about."' WHERE id = '".$id."'; ";
+                // insert query for more_information ; 
+                
+                $nickname = $_POST['nickname'];
+                $altern_email = $_POST['alt_email'];
+                $cell = $_POST['cell_phone'];
+                $city = $_POST['city'];
+                $state = $_POST['state'];
+                $zip = $_POST['zip'];
+                
+                $sql = "INSERT INTO more_information VALUES('".$id."', '".$nickname."', '".$altern_email."','".$cell."','".$city."','".$state."','".$zip."') ; ";
+
+               // echo "sql : " . $sql;
+                //
                 $res = mysqli_query($con, $sql);
                 if (!$res)
                 {// if there is a problem, it lies here

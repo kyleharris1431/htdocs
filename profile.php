@@ -51,6 +51,23 @@ while($row = mysqli_fetch_array($res_3)) // fetch results as array and print dat
     $main_image =  $row['main_picture'];
  }     
 
+
+$pictureRoots = getPicturesArray($id);
+ 
+ function getPicturesArray($id)
+ {
+    $pic_roots = array();
+  // include('dAl.php'); 
+    $xc = new DataAccessProtocol();
+    $res = $xc->runQueryWithRes("SELECT picture_root FROM images WHERE id = '".$id."';");
+    while($row = mysqli_fetch_array($res)) // fetch results as array and print data
+    {  
+     // echo "Picture root : ".$row['picture_root'];
+      array_push($pic_roots,$row['picture_root']);
+    }     	 
+    return $pic_roots;
+ }
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -99,9 +116,11 @@ while($row = mysqli_fetch_array($res_3)) // fetch results as array and print dat
                                <li><a href="edit_interests.php" target="_self" id="edit-interests-link" class="skel-panels"><span class="fa fa-edit">Interests</span></a></li>
                                
                                
-                               <li><a href="find_a_friend.php" target="_self" id="edit-interests-link" class="skel-panels"><span class="fa fa-plus">Connect.</span></a></li>
+                               <li><a href="find_a_friend.php" target="_self" id="findfriends-link" class="skel-panels"><span class="fa fa-plus">Connect.</span></a></li>
                                 
-                               <li><a href="upload_images.php" target="_self" id="edit-interests-link" class="skel-panels"><span class="fa fa-plus">Upload to Gallery</span></a></li>
+                               <li><a href="upload_images.php" target="_self" id="upload_imgs-link" class="skel-panels"><span class="fa fa-plus">Upload to Gallery</span></a></li>
+                                
+                               <li><a href="my_posts.php" target="_self" id="my-posts-link" class="skel-panels"><span class="fa fa-plus">Poster</span></a></li>
                                                                 
 
 							</ul>
@@ -145,80 +164,45 @@ while($row = mysqli_fetch_array($res_3)) // fetch results as array and print dat
 
 						</div>
 					</section>
-					
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
-					
-							<header>
-								<h2>Portfolio</h2>
-							</header>
-							
-							<p><?php echo $portfolio_text ?></p>
-						
-							<div class="row">
-								<div class="4u">
-									<article class="item">
-										<a href="http://ineedchemicalx.deviantart.com/art/A-million-suns-384369739" class="image full"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Ipsum Feugiat</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="http://ineedchemicalx.deviantart.com/art/Mind-is-a-clear-stage-375431607" class="image full"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u">
-									<article class="item">
-										<a href="http://ineedchemicalx.deviantart.com/art/You-really-got-me-345249340" class="image full"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="http://ineedchemicalx.deviantart.com/art/Ad-infinitum-354203162" class="image full"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u">
-									<article class="item">
-										<a href="http://ineedchemicalx.deviantart.com/art/Elysium-355393900" class="image full"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="http://ineedchemicalx.deviantart.com/art/Emperor-of-the-Stars-370265193" class="image full"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
-								</div>
-							</div>
-
-						</div>
-					</section>
-
-				<!-- About Me -->
 					<section id="about" class="three">
 						<div class="container">
 
 							<header>
 								<h2>About Me</h2>
 							</header>
-
-							
 							<span class="image"><img src="<?php echo $main_image?>" alt=""  id = "spaceimage" class = "space"/></span>
 							
-							<p><?php echo $about_me?> </p>
+							<p><?php echo $about_me?>
+							 </p>
 
 						</div>
 					</section>
+					
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+					
+							<header>
+								<h2>Snap Shot</h2>
+							</header>
+							
+							<p><?php //echo $portfolio_text ?></p>
+						<!- These are just placeholder images until the user submits their own --> 
+						 <div id="hobby_div">
+                    <?php for($x=0; $x<sizeOf($pictureRoots); $x++) { ?>
+                       <div class = "hobby_container">
+                      <img class = "hobby_img" src = "user_images/<?php echo $pictureRoots[$x]?>">
+                       </div>
+		             <?php } ?>
+		          		</div>
+
+						</div>
+						</div>
+					</section>
+					</div>
+
+				<!-- About Me -->
+					
 			
 				<!-- Contact -->
 					<section id="contact" class="four">

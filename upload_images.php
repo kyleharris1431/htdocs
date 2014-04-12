@@ -236,9 +236,10 @@ if (isset($_SESSION['id_num']))
 					<h1 class = "heading"> <center> Video Gallery </center> </h1> 
 			  </header>
 			 <?php for($x=0; $x<sizeof($video_roots); $x++) { ?> 
-<video width="400" height="270" controls>
+<video width="400" height="270" controls="no">
 <source src="user_videos/<?php echo $video_roots[$x];?>" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 </video> 
+
 
 <?php } ?>
 		</section>

@@ -5,31 +5,29 @@
 
 class ajaxVal
 {
-
-    function formValidate() 
-    {
-        //Put form elements into post variables (this is where you would sanitize your data)
-        //$field1 = $_POST['field1'];
-        
-        $about = $_POST['about_text'];
-
-        $id='';
-        if (isset($_SESSION['id_num']))
-        {
-        $id = $_SESSION['id_num'];
-        }
-
-        //Establish values that will be returned via ajax
+   function formValidate() 
+   {
         $return = array();
-        $return['msg'] = '';     // just to get compiler to hush up
+        
         $return['error'] = false;
+        
+        $author = $_POST['hidden_author'];
+        $post_id = $_POST['hidden_id'];
+        $comment = $_POST['hidden_comment'];
+        
+        
+      //  $return['msg'] = '<p>'.$testString.'</p>';  // testing */
+
+
+        //$return['msg'] = '';     // just to get compiler to hush up
+        //$return['error'] = false;
 
         //Begin form validation functionality
-        if (!isset($about) || empty($about))      // checks if fiellds are empty
+       /* if (!isset($portfolio) || empty($portfolio))      // checks if fiellds are empty
         {
             $return['error'] = true;
-           // $return['msg'] .= '<li>Error: Field1 is empty.</li>';
-        }
+            $return['msg'] .= '<li>Error: Field1 is empty.</li>';
+        }*/
 
         //Begin form success functionality
         if ($return['error'] === false)    // checks for an error
@@ -52,7 +50,11 @@ class ajaxVal
             else 
             {
               
-                $sql = "UPDATE user_info_2 SET about_me = '".$about."' WHERE id = '".$id."'; ";
+                //$sql = "UPDATE user_info_2 SET portfolio = '".$portfolio."' WHERE id = '".$id."'; ";
+                // update interests where set interest_1 = $interests[0]-$interests[9] - interest_10 Where id = $id; //
+                
+                 
+                $sql = "INSERT INTO comments VALUES ('".$author."','".$post_id."','".$comment."');";
                 $res = mysqli_query($con, $sql);
                 if (!$res)
                 {// if there is a problem, it lies here

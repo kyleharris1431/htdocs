@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>BestBrightLight</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.form.js"></script>
+   
+<link rel="stylesheet" href="css/mystyle.css" type="text/css"/>
+ </head>   
+<body>
+<!-- Main -->
+<div id = "header">
+<hr>
+<hr>
+</div>
+
+<br>
+<br>
+<br>
+<div id="newdiv">
+    <!-- Intro -->
+   <section id="top" class="one">
+        <div class="container" id = "container">
+            <h3 style="text-align: center">Basic Information (Step 1 of 3)</h3>
+<p> <center><form id = "f_l_e_p" method="post" class = "login_form">
+            <label style="text-align: center">First Name:</label>
+            <span class="input_span"> <input type="text" id = "first_name" name = "first_name" required="true"> </span>
+            <br>
+            <label style="text-align: center">Last Name:</label>
+            <span class="input_span"><input type="text" id = "last_name" name = "last_name" required="true"> </span>
+            <br>
+            <label style="text-align: center">Email:</label>
+           <span class="input_span"> <input type="email" id = "email" name = "email" required="true" id = "email_input"> </span>
+            <br>
+           <label style="text-align: center">Password:</label>
+           <span class="input_span"> <input type="password" id = "password" name = "password"></span>
+            <br>
+           <label style="text-align: center">Confirm Password:</label>
+           <span class="input_span"> <input type="password" id = "conf_password" name = "conf_password"></span>
+            <hr>
+            <center> <input id="sub_values" type="button" value="Complete Step 1" height = "20px"></center>
+        </form> </center></p>
+        </div>
+   </section>    
+
+    <section id ="form_2_section">
+        <h3 style="text-align: center">Were getting there.. (Step 2 of 3)</h3>
+        <p style="text-align: center">
+        <center>
+             <p style="text-align: center"> We are a company built in order to lend a helping hand. <br>How can BBL help you?</p>
+             <hr>
+             <form class = "login_form" id ="form_2">
+             <!--- FIRST CHECK BOX DIV -->
+             <div style="border-bottom : 1px solid black">
+             <p style="width : 75%">I want to connect with others who share my passions  or interests and share what I have learned from others</p>
+             <input type="checkbox" class="checkboxer" id = "connect_others" name = "cb" value="passions"/>
+             <br>
+             </div>
+             <!--- SECOND CHECK BOX DIV -->
+              <div style="border-bottom : 1px solid black">
+             <p style="width : 75%">I am applying to a new school, college or university and or transferring</p>
+             <input type="checkbox" class="checkboxer" id = "new_school" name = "cb" value="college_app"/>
+             <br>
+             </div>
+      
+
+            <!--- THIRD CHECK BOX DIV -->
+             <div style="border-bottom : 1px solid black">
+             <p style="width : 75%">I am looking for a paying job or an internship</p>
+             <input type="checkbox" class="checkboxer" id = "paying_job" name = "cb" value="paying_internship"/>
+             <br>
+             </div>
+             <!--- FOURTH CHECK BOX DIV -->
+              <div style="border-bottom : 1px solid black">
+             <p style="width : 75%">I would like to volunteer for an organization in my community</p>
+             <input type="checkbox" class="checkboxer" id = "volunteer" name = "cb" value="volunteer"/>
+             <br>
+             </div>
+             <!--- FIFTH CHECK BOX DIV -->
+              <div style="border-bottom : 1px solid black">
+             <p style="width : 75%">I have a small business and want more people to know what I do or make and sell</p>
+             <input type="checkbox" class="checkboxer" id = "small_business" name = "cb" value="small_business"/>
+             <br>
+             </div>
+              <!--- SIXTH CHECK BOX DIV -->
+              <div style="border-bottom : 1px solid black">
+             <p style="width : 75%">I would like a mentor, someone to learn from to help me achieve my goals</p>
+             <input type="checkbox" class="checkboxer" id = "mentor" name = "cb" value="mentor"/>
+             <br>
+             </div>
+               <!--- Seventh CHECK BOX DIV -->
+              <div style="border-bottom : 1px solid black">
+             <p style="width : 75%">I want to start a business or launch a product and need advice and/or investors</p>
+             <input type="checkbox" class="checkboxer" id = "start_business" name = "cb" value="start_business"/>
+             <br>
+             </div>
+              <!--- eight CHECK BOX DIV -->
+              <div style="border-bottom : 1px solid black">
+             <p style="width : 75%">I am looking for a support group to help me achieve my goals</p>
+             <input type="checkbox" class="checkboxer" id = "support_group" name = "cb" value = "support_goals"/>
+             <br>
+             </div>
+              <!--- Nineth CHECK BOX DIV -->
+              <div style="border-bottom : 1px solid black">
+             <p style="width : 75%">I am looking for an apartment or house to rent, alone or with others</p>
+             <input type="checkbox" class="checkboxer" id = "house" name = "cb" value="house_rent"/>
+             <br>
+             </div>
+
+              <center> <input id="submit_second" type="button" value="Complete Step 2"/></center>
+             </form>
+        </center>
+        </p>
+    </section>
+    
+    
+    
+    <section id ="form_3_section">
+            <h3 style="text-align: center">More info (Step 3 of 3)</h3>
+            <h5  style="text-align: center">What lights up your life</h5>
+            <p style="text-align: center" >
+           
+            <center>
+        
+                 <form id = "form_3" method="post" action="" class="login_form">
+                  <p>What are some of your passions in life? What are the things you enjoy doing:</p>
+                  <br>
+                  <textarea class = "stage2_ta" id = "passions" >Let us know.. But separate each value by commas</textarea>
+                  <hr> 
+                  <p style="text-align:center"> What are some of your goals ? </p>
+                   <textarea class = "stage2_ta" id = "one_year"> Where do you want to be 1 year from now ?</textarea>
+                   <hr>
+                   <textarea class = "stage2_ta" id = "two_year"> Where do you want to be 3 years from now ? </textarea>
+                   <hr>
+                   <textarea class = "stage2_ta" id = "three_year"> Where do you want to be 5 years from now ?</textarea>
+                   <hr> 
+               <p style="text-align:center"> What separates you from the pack? Post anything. It can be a written experience or just simply, a photo.</p>
+                 </form>
+                 
+                 <hr style="color : steelblue">
+               <p> <center> Post Area </center> </p>
+               
+                         <div id = "posting_div">
+                         <p style="text-align:center">
+                         
+                         
+                          <form id = "file_form" method="post" action="newinital_ajax.php" class="login_form" enctype="multipart/form-data">
+                          <div>
+                          <img src ="" width="75%"height="90%" id = "preview">              
+                          <input type="file" id="file_input" onchange="showPreview()" name = "file_input">
+                          </p>
+                          </div>
+                          <!--<img class="placeholder" id = "img_placeholder"> -->
+                          <textarea id = "proud_textarea">What are you proud of?</textarea>
+                          <center>
+                          <center> 
+                          <! -- ////////////////////// HIDDEN INPUTS  //////////////////////////////// -->
+                          <input type = "hidden" id = "entered_first_name" name = "entered_first_name"/>
+                          <input type = "hidden" id = "entered_last_name"  name = "entered_last_name"/>
+                          <input type = "hidden" id = "entered_email"      name = "entered_email" >
+                          <input type = "hidden" id = "entered_pass"       name = "entered_pass"/>
+                          <!--- TEXT AREA VALUES -->
+                          <input type = "hidden" id = "passions_entered_text"   name = "passions_entered_text"/>
+                          <input type = "hidden" id = "one_year_entered_text"   name = "one_year_entered_text"/>
+                          <input type = "hidden" id = "three_year_entered_text" name = "three_year_entered_text" >
+                          <input type = "hidden" id = "five_year_entered_text"  name = "five_year_entered_text"/>
+                          <input type = "hidden" id = "proud_text"              name = "proud_text" />
+
+                          <input type="hidden"   id = "checked_checkboxes"      name="checked_checkboxes" />
+                          
+                          <input id="sub_passions" type="button" value="Complete Step 3" height = "20px"></center>
+                      </form> 
+               
+             </center>
+        
+            </p>
+            
+           
+
+    </section>
+
+
+</div>
+
+<form id = "hiddenform">
+ <!-- flep vals -->
+<input type = "hidden" id = "first_entered_first_name" name = "first_entered_first_name"/>
+<input type = "hidden" id = "first_entered_last_name"  name = "first_entered_last_name"/>
+<input type = "hidden" id = "first_entered_email"      name = "first_entered_email" >
+<input type = "hidden" id = "first_entered_pass"       name = "first_entered_pass"/>
+<!--- TEXT AREA VALUES -->
+<input type = "hidden" id = "first_passions_entered_text"   name = "first_passions_entered_text"/>
+<input type = "hidden" id = "first_one_year_entered_text"   name = "first_one_year_entered_text"/>
+<input type = "hidden" id = "first_three_year_entered_text" name = "first_three_year_entered_text" >
+<input type = "hidden" id = "first_five_year_entered_text"  name = "first_five_year_entered_text"/>
+<input type = "hidden" id = "first_proud_text"              name = "first_proud_text" />
+
+<input type="hidden"   id = "first_checked_checkboxes"      name="first_checked_checkboxes" />
+<!-- END OF HIDDEN FIELD FORM -->
+</form>
+
+
+<!-- Footer -->
+<div id="footer">
+    <!-- Copyright -->
+    <p align="center">
+        <p align="center">&copy; 2014 BestBrightLight All rights reserved.</p>
+        <br>
+       </p>
+</div>
+
+
+<script type="text/javascript" src="login.js"> </script>
+
+<script type="text/javascript">
+function showPreview()
+{
+  var preview = $('#preview');
+  var file = document.getElementById('file_input').files[0];
+  var reader = new FileReader();
+  
+  reader.onloadend = function()
+  {
+	  preview.attr('src' , reader.result);
+  }
+  if(file)
+  {
+	  reader.readAsDataURL(file);
+  }
+  else
+  {
+		  preview.attr('src' , '');
+  }
+}
+</script>
+</body>
+</html>
+

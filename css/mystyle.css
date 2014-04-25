@@ -39,7 +39,7 @@ input[type='checkbox']:checked
   height: 70%;
   border: 1px steelblue;
   //background: #fcfd9f;
-  background: rgba(255,255,213,0.52);
+  background: white;
 }
 
 #f_l_e_p input, textarea

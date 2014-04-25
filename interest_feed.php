@@ -98,7 +98,7 @@ $post_author = $firstname." ".$lastname;
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>BuBl</title>
+		<title>BuBL</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />

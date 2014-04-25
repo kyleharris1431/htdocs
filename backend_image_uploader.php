@@ -3,7 +3,7 @@
 class backendImageUpload
 {
 
- /*function transferImage() 
+ function transferImage() 
   {
      $target = "js_img_test/";
      $target = $target . basename( $_FILES['photo']['name']);
@@ -23,20 +23,12 @@ class backendImageUpload
 	     return json_encode($return);
      }   
     
-  }*/
-  
-  function testTheory()
-  {
-	  $temp_path = $_FILES['photo']['tmp_name'];
-	  echo "<h1> Temporary path :".$temp_path."</h1>";
-	  echo '<img src = "'.$temp_path.'" width = 100px height = 100px> </img>';
-	  
   }
-
+  
 }
 
 $x = new backendImageUpload();
-$x->testTheory();
+
 //echo $x->transferImage();
 
 ?>

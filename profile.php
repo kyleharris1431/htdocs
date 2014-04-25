@@ -108,19 +108,22 @@ $pictureRoots = getPicturesArray($id);
 						<nav id="nav">
 							<ul>
 								<li><a href="#top" id="top-link" class="skel-panels-ignoreHref"><span class="fa fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link" class="skel-panels-ignoreHref"><span class="fa fa-th">Portfolio</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link" class="skel-panels-ignoreHref"><span class="fa fa-th">Snap Shot</span></a></li>
 								<li><a href="#about" id="about-link" class="skel-panels-ignoreHref"><span class="fa fa-user">About Me</span></a></li>
 								<li><a href="#contact" id="contact-link" class="skel-panels-ignoreHref"><span class="fa fa-envelope">Contact</span></a></li>
                                 <li><a href="edit.php" target="_self" id="edit-info-link" class="skel-panels"><span class="fa fa-edit">Edit My Information</span></a></li>
                                 
-                               <li><a href="edit_interests.php" target="_self" id="edit-interests-link" class="skel-panels"><span class="fa fa-edit">Interests</span></a></li>
+                              
                                
-                               
-                               <li><a href="find_a_friend.php" target="_self" id="findfriends-link" class="skel-panels"><span class="fa fa-plus">Connect.</span></a></li>
+                               <li><a href="geo_test.php" target="_self" id="findfriends-link" class="skel-panels"><span class="fa fa-plus">Connect.</span></a></li>
                                 
                                <li><a href="upload_images.php" target="_self" id="upload_imgs-link" class="skel-panels"><span class="fa fa-plus">Upload to Gallery</span></a></li>
                                 
-                               <li><a href="my_posts.php" target="_self" id="my-posts-link" class="skel-panels"><span class="fa fa-plus">Poster</span></a></li>
+                               <li><a href="my_posts.php" target="_self" id="my-posts-link" class="skel-panels"><span class="fa fa-plus">Poster</span></a></li> 
+                                <li><a href="interest_feed.php" target="_blank" id="my-posts-link" class="skel-panels"><span class="fa fa-plus">Bulletin</span></a></li> 
+
+
+                               
                                                                 
 
 							</ul>
@@ -168,7 +171,7 @@ $pictureRoots = getPicturesArray($id);
 						<div class="container">
 
 							<header>
-								<h2>About Me</h2>
+								<h2>About <?php echo $first_name?></h2>
 							</header>
 							<span class="image"><img src="<?php echo $main_image?>" alt=""  id = "spaceimage" class = "space"/></span>
 							

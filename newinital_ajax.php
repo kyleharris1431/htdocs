@@ -195,7 +195,7 @@ class fileUploder
 {
 function uploadFile()
 {
-
+ // this will also be profile picture for simplicity // 
 
      $target = "js_img_test/";
      $target = $target . basename( $_FILES['file_input']['name']);
@@ -207,7 +207,7 @@ function uploadFile()
      }
      else
      {
-       echo "<h1> FUCK! </h1>";
+       echo "<h1> Unsuccessful </h1>";
      }  
      
     return $target;

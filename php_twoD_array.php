@@ -35,12 +35,5 @@ class commenter
 
 
   $arr_test = array();
-  $arr_test[0] = array("I", "Like","Cars");
-  
-  for($y=0; $y<sizeof($arr_test); $y++)
-  {
-	  
-	  echo $arr_test[0][$y];
-  } 
-
+ 
 ?>
